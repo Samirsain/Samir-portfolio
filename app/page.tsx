@@ -7,7 +7,7 @@ import { Contact } from "@/components/contact"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-export default function Portfolio() {
+export default function SamirSainPortfolio() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

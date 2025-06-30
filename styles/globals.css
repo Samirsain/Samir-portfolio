@@ -92,3 +92,37 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradientMove 4s ease-in-out infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.nav-link {
+  position: relative;
+  color: var(--tw-prose-muted-foreground, theme('colors.muted.DEFAULT'));
+  transition: color 0.3s;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: var(--tw-prose-primary, theme('colors.primary.DEFAULT'));
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--tw-prose-primary, theme('colors.primary.DEFAULT')), var(--tw-prose-secondary, theme('colors.secondary.DEFAULT')));
+  border-radius: 9999px;
+  transition: width 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}

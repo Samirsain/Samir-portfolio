@@ -5,9 +5,9 @@ import { Calendar } from "lucide-react"
 export function Experience() {
   const experiences = [
     {
-      title: "Senior Full-Stack Developer",
+      title: "Full-Stack Developer",
       company: "Tech Innovations Inc.",
-      period: "2022 - Present",
+      period: "2022 - 2025",
       description:
         "Lead development of scalable web applications, mentor junior developers, and architect cloud-native solutions.",
       technologies: ["React", "Node.js", "AWS", "TypeScript", "PostgreSQL"],

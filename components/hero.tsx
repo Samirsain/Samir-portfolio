@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowDown, Github, Instagram, Linkedin, Mail } from "lucide-react"
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -18,7 +18,7 @@ export function Hero() {
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent">
-              Full-Stack Developer
+              Samir Sain - Full-Stack Developer
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Crafting exceptional digital experiences with modern technologies and clean, scalable code.
@@ -35,15 +35,21 @@ export function Hero() {
           </div>
 
           <div className="flex items-center justify-center gap-6">
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <Mail className="h-5 w-5" />
-            </Button>
+            <a href="https://github.com/Samirsain" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Github className="h-5 w-5" />
+              </Button>
+            </a>
+            <a href="https://linkedin.com/in/samirsain" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </a>
+            <a href="https://www.instagram.com/codexmir" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Instagram className="h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>

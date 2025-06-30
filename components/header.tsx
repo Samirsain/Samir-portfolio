@@ -33,46 +33,21 @@ export function Header() {
         isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent",
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="font-bold text-xl">
-            <span className="text-primary">{"<"}</span>
-            DevName
-            <span className="text-primary">{"/>"}</span>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between h-16 w-full">
+          {/* Logo on the left */}
+          <div className="flex items-center gap-3">
+            <img src="/placeholder-logo.png" alt="Samir Sain Logo" className="h-10 w-10 object-contain rounded-full shadow" />
+            <span className="font-bold text-xl">Samir Sain</span>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation on the right */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Skills
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("experience")}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Experience
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </button>
+            <button onClick={() => scrollToSection("about")} className="nav-link">About</button>
+            <button onClick={() => scrollToSection("skills")} className="nav-link">Skills</button>
+            <button onClick={() => scrollToSection("projects")} className="nav-link">Projects</button>
+            <button onClick={() => scrollToSection("experience")} className="nav-link">Experience</button>
+            <button onClick={() => scrollToSection("contact")} className="nav-link">Contact</button>
             <ThemeToggle />
           </nav>
 
@@ -134,3 +109,16 @@ export function Header() {
     </header>
   )
 }
+
+/* Add this to your global CSS (e.g., styles/globals.css):
+.nav-link {
+  @apply relative text-muted-foreground hover:text-primary transition-colors duration-300 font-medium;
+}
+.nav-link::after {
+  content: "";
+  @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-300;
+}
+.nav-link:hover::after {
+  @apply w-full;
+}
+*/
