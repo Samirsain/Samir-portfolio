@@ -1,0 +1,14 @@
+h1{
+    color: salmon;
+background-color: aliceblue;
+}
+body{
+    background-color: lightblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+button{
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
+  transition: calc(0.5s);
+}
